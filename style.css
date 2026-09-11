@@ -1,0 +1,145 @@
+
+/* Basic CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+section h2 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Skills - Grid */
+section ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    list-style: none;
+}
+
+section li {
+    background-color: #e6f0ff;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #b8d0f0;
+}
+
+/* Education */
+section h3 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+/* Contact Form - Flexbox */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #aaa;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    section ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    section ul {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+}
+```
