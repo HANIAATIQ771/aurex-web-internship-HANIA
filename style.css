@@ -1,89 +1,123 @@
-
-/* Basic CSS */
+```css
+/* ---------- General ---------- */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f7fc;
+    color: #4a4a5a;
     line-height: 1.6;
 }
 
-/* Header */
+hr {
+    display: none;
+}
+
+/* ---------- Header ---------- */
 header {
-    background-color: #1e3a5f;
-    color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #e9e4f9, #fceef4);
+    border-bottom: 1px solid #eee8f5;
 }
 
 header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    margin: 0;
+    color: #665a8d;
+    font-size: 44px;
+    letter-spacing: 1px;
 }
 
 header h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    margin: 6px 0;
+    color: #8b7da8;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-/* Sections */
+header p {
+    margin: 8px 0 0;
+    color: #777386;
+}
+
+/* ---------- Main Sections ---------- */
 section {
-    background-color: white;
-    width: 80%;
-    margin: 30px auto;
-    padding: 30px;
-    border: 1px solid #ddd;
+    max-width: 900px;
+    margin: 18px auto;
+    padding: 26px 32px;
+    background: #ffffff;
+    border: 1px solid #eeeaf5;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(100, 90, 130, 0.07);
 }
 
 section h2 {
-    color: #1e3a5f;
-    margin-bottom: 15px;
-    text-align: center;
+    margin: 0 0 12px;
+    color: #665a8d;
+    font-size: 25px;
+    border-left: 4px solid #c9bce8;
+    padding-left: 10px;
+}
+
+section h3 {
+    margin-bottom: 5px;
+    color: #8b7da8;
 }
 
 section p {
-    font-size: 16px;
-    margin-bottom: 10px;
+    margin: 8px 0;
 }
 
-/* Skills - Grid */
-section ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+/* ---------- Skills ---------- */
+ul {
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    padding: 0;
+    margin: 15px 0 0;
     list-style: none;
 }
 
-section li {
-    background-color: #e6f0ff;
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #b8d0f0;
+li {
+    padding: 7px 16px;
+    background: #f2eefb;
+    color: #716394;
+    border: 1px solid #e4dcf3;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-/* Education */
-section h3 {
-    color: #2563eb;
-    margin-bottom: 5px;
+li:hover {
+    background: #e5def5;
+    transform: translateY(-2px);
 }
 
-/* Contact Form - Flexbox */
+/* ---------- Contact Form ---------- */
 form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    max-width: 600px;
-    margin: auto;
+    gap: 5px;
 }
 
-input, textarea {
-    padding: 10px;
-    border: 1px solid #aaa;
+label {
+    margin-top: 5px;
+    color: #665a8d;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #e2ddec;
+    border-radius: 9px;
+    background: #faf9fd;
+    color: #555;
+    font-family: inherit;
     font-size: 15px;
 }
 
@@ -91,55 +125,89 @@ textarea {
     resize: vertical;
 }
 
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #b9a9dc;
+    background: #fff;
+}
+
 input[type="submit"] {
-    background-color: #1e3a5f;
-    color: white;
+    width: 120px;
+    margin-top: 8px;
+    padding: 10px;
     border: none;
-    cursor: pointer;
-    padding: 12px;
-}
-
-/* Footer */
-footer {
-    background-color: #1e3a5f;
+    border-radius: 22px;
+    background: #a999c9;
     color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #8f7caf;
+    transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    margin-top: 25px;
+    padding: 18px;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    background: #eeeaf6;
+    color: #756b86;
 }
 
-/* Tablet */
+/* ---------- Tablet ---------- */
 @media (max-width: 768px) {
-    section {
-        width: 90%;
-    }
 
-    section ul {
-        grid-template-columns: repeat(2, 1fr);
+    header {
+        padding: 45px 20px;
     }
 
     header h1 {
-        font-size: 32px;
+        font-size: 38px;
+    }
+
+    section {
+        margin: 14px 18px;
+        padding: 24px;
     }
 }
 
-/* Mobile */
+/* ---------- Mobile ---------- */
 @media (max-width: 480px) {
-    section {
-        width: 95%;
-        padding: 20px;
-    }
 
-    section ul {
-        grid-template-columns: 1fr;
+    header {
+        padding: 40px 15px;
     }
 
     header h1 {
-        font-size: 26px;
+        font-size: 31px;
     }
 
     header h2 {
-        font-size: 18px;
+        font-size: 17px;
+    }
+
+    section {
+        margin: 12px 10px;
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    li {
+        text-align: center;
     }
 }
 ```
